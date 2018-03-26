@@ -27,7 +27,7 @@
                    $("#result").val("data inserted");
                }
            });
-       }) ;
+       });
     });
 </script>
 </body>
