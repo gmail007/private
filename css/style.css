@@ -180,10 +180,17 @@ header{
 }
 .loginContainer
 {
-    display: none;
+
     margin-top: 15px;
     opacity: 0.9;
 }
+#sign_section{
+    display: none;
+}
+#loginbtn{
+    cursor: pointer;
+}
+
 
 
 
