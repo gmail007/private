@@ -191,6 +191,20 @@ header{
     cursor: pointer;
 }
 
-
+@media only screen and (max-width: 768px)
+{
+    #main {
+        height: 300vh;
+    }
+    #list
+    {
+        width: 250px;
+    }
+    #signInBtn{
+        float: left;
+        text-align: center;
+        margin-top: 0px;
+    }
+}
 
 

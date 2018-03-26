@@ -37,25 +37,16 @@ class dashboardFunction
         }
 
     }
-    public function draft($sender, $receiver, $subject, $message, $imgname, $tmp)
+    public function draft($sender, $receiver, $subject, $message)
     {
-        $rand2 = rand(0,100000);
-        $draft = mysqli_query($this->dbcon, "insert into mail(sender, receiver, subject, message, attachment_id, draft_status) values('$sender', '$receiver', '$subject', '$message',$rand2, 1)") or die('draft not saved');
-        $attach1 = mysqli_query($this->dbcon, "insert into attachment(mail_id, user_file) values($rand2,'$imgname')") or die('attachment not inserted');
-        if($attach1)
-        {
-            mkdir("images/$sender", 0777, true);
-            chmod("images/$sender", 0777);
-            move_uploaded_file($tmp,"images/$sender/$imgname");
+        $draft = mysqli_query($this->dbcon, "insert into mail(sender, receiver, subject, message, draft_status) values('$sender', '$receiver', '$subject', '$message', 1)") or die('draft not saved');
 
-        }
         if($draft){
             echo "mail saved to draft";
         }
         else
         {
             echo "mail not saved to draft";
-            echo "<script>$('.modal').show();</script>";
         }
     }
 
@@ -281,18 +272,18 @@ if($_POST['to']) {
     $imgname = $_FILES['file']['name'];
     $tmp = $_FILES['file']['tmp_name'];
 
-    if ($_POST['draft1']) {
 
-        $dash->draft($sender, $receiver, $subject, $message, $imgname, $tmp);
-    }
-    else
-        {
-
-        $dash->Mail($sender, $receiver, $subject, $message, $imgname, $tmp);
-
-    }
+    $dash->Mail($sender, $receiver, $subject, $message, $imgname, $tmp);
 }
+if ($_POST['draft1']) {
+    session_start();
+    $receiver = $_POST['to'];
+    $subject = $_POST['subject'];
+    $message = $_POST['message'];
+    $sender = $_SESSION['email'];
 
+    $dash->draft($sender, $receiver, $subject, $message);
+}
 
 if($_POST['replySender'])
 {

@@ -227,8 +227,10 @@ $(document).ready(function () {
     });
 
     $('#username').change(function () {
-
         $('#list').hide();
+    });
+    $('body').click(function () {
+       $('#list').hide();
     });
 
 }); // end of document ready

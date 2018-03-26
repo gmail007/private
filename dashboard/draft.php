@@ -42,7 +42,8 @@ if(isset($submit1))
 
     </div>
 </div>
-<table class="table" id="draft_table">
+<div class="table-responsive">
+    <table class="table table-striped table-hover" id="draft_table">
 
     <?php
     while ($arr1= mysqli_fetch_array($data1))
@@ -84,6 +85,7 @@ if(isset($submit1))
     ?>
     </form>
 </table>
+</div>
 
 
 <script>

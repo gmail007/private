@@ -51,7 +51,7 @@
 
         <div class="form-group">
             <button type="button" id="compose-send"><span class="fa fa-paper-plane"></span> Send</button>
-            <span id="saveToDraft" class="fa fa-cloud-download">Save to draft </span>
+            <button type="button" id="saveToDraft" class="fa fa-cloud-download">Save to draft </button>
         </div>
     </form>
 <!--    <script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>-->

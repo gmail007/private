@@ -49,7 +49,7 @@ else {
         <div class="row">
             <div class="col-md-4">
                 <div class="logo">
-                    <img src="images/logo2.png">
+                    <img src="images/logo2.png" id="companyLogo">
                 </div>
             </div>
 

@@ -40,7 +40,7 @@
             <p id="text1">Access our product to connect with </p>
             <p id="text2">fastest mail service</p>
             <div class="laptop">
-                <img src="images/gmail.png" id="gmail">
+                <img src="images/gmail.png" class="img-responsive" id="gmail">
             </div>
 
         </div>
@@ -127,12 +127,14 @@
                         <label class="control-label">Location</label>
                         <div >
                             <select name="location" id="location" class="form-control">
-                                <option>select country</option>
-                                <option value="Delhi">India</option>
-                                <option value="srilanka">srilanka</option>
-                                <option value="pakistan">Pakistan</option>
-                                <option value="bhutan">Bhutan</option>
-                                <option value="bangladesh">Bangladesh</option>
+                                <option>select state</option>
+                                <option value="Delhi">Delhi</option>
+                                <option value="Haryana">Haryana</option>
+                                <option value="Uttar pradesh">Uttar pradesh</option>
+                                <option value="Rajsthan">Rajsthan</option>
+                                <option value="Gujrat">Gujrat</option>
+                                <option value="Tamilnadu">Tamilnadu</option>
+                                <option value="keral">keral</option>
                             </select>
                         </div>
                     </div>

@@ -43,7 +43,7 @@ if(isset($submit1))
 }
 
 ?>
-
+<div class="inbox_class"></div>
 <div id="myrow">
 <div class="row">
     <div class="col-md-1">
@@ -60,7 +60,8 @@ if(isset($submit1))
 
 </div>
 </div>
-<table class="table" id="inbox_table">
+<div class="table-responsive">
+<table class="table table-striped table-hover " id="inbox_table">
 
     <?php
     if(mysqli_num_rows($data1) > 0) {
@@ -104,7 +105,7 @@ if(isset($submit1))
     ?>
     </form>
 </table>
-
+</div>
 
 <script>
     $('#inbox span').css('color','#ce183d');

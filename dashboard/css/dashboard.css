@@ -327,3 +327,33 @@ input[name='replyFile']
 	text-align: center;
 }
 
+@media only screen and (max-width: 768px) {
+	.search{
+		width: 25em;
+	}
+	#inbox_table tr #td3 #inbox_time {
+		font-size: 10px;
+	}
+	.userPic{
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+	.profile-circle {
+		float: none;
+		text-align: center;
+	}
+	.searchResult
+	{
+		width: 250px;
+	}
+	.sidebar ul li span {
+		font-size: 14px;
+	}
+
+	body {
+		font-size: 10px;
+	}
+	
+}
+

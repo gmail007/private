@@ -46,6 +46,7 @@ $(document).ready(function()
                 $('#subject1').val("");
                 $('#message').val();
                 $('.composeEmail').modal('hide');
+                window.location.href ='?page=inbox';
 
             }
         });
@@ -97,9 +98,7 @@ $(document).ready(function()
         var subject = $('#subject1').val();
         var message = $('#message').val();
         var draft1 = $('#hiddenDraft').val();
-        var filedata = $('#img').prop('files')[0];
         var form_data = new FormData();
-        form_data.append('file', filedata);
         form_data.append('to', to1);
         form_data.append('subject', subject);
         form_data.append('message', message);
@@ -114,7 +113,7 @@ $(document).ready(function()
             processData: false,
             data:form_data,
             success: function (data) {
-                // $('#compose-result').html(data);
+                // $('.inbox_class').html(data);
                 console.log(data);
             }
         });
