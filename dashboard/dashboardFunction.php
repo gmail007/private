@@ -91,9 +91,9 @@ class dashboardFunction
         return $del;
     }
 
-    public function trash()
+    public function trash($user)
     {
-        $trash = mysqli_query($this->dbcon,"select * from mail where trash_status=1") or die('trash not selected');
+        $trash = mysqli_query($this->dbcon,"select mail.id, mail.sender, mail.receiver, mail.subject, mail.message, mail.mail_time, users.email from mail JOIN users on users.email = mail.sender or users.email = mail.receiver where users.email = '$user' AND (mail.sender = '$user' OR mail.receiver ='$user') AND trash_status=1 AND draft_status=0") or die('trash not selected');
         return $trash;
     }
 

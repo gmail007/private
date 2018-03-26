@@ -3,7 +3,7 @@ include_once 'dashboardFunction.php';
 
 $user =$user."@hestamail.com";
 $inbox1 = new dashboardFunction();
-$data1 = $inbox1->trash();
+$data1 = $inbox1->trash($user);
 $date1 = date("y-m-d H:i:s");
 extract($_POST);
 if(isset($submit1))
