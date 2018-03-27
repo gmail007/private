@@ -116,7 +116,7 @@ $(document).ready(function () {
                    alert("This browser does not support HTML5.");
                }
            var val = $("#img").val().toLowerCase(),
-               regex = new RegExp("(.*?)\.(jpeg|jpg)$");
+               regex = new RegExp("(.*?)\.(jpeg|jpg|png)$");
 
            if (!(regex.test(val))) {
                $(this).val('');
