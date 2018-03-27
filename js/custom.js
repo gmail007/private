@@ -107,6 +107,24 @@ $(document).ready(function () {
 
    });
 
+
+       $('input[type=file]').change(function () {
+               if (typeof ($("#img")[0].files) != "undefined") {
+                   var size = parseFloat($("#img")[0].files[0].size / 512).toFixed(2);
+                   alert("Size can not be exceed from 512 kb");
+               } else {
+                   alert("This browser does not support HTML5.");
+               }
+           var val = $("#img").val().toLowerCase(),
+               regex = new RegExp("(.*?)\.(jpeg|jpg)$");
+
+           if (!(regex.test(val))) {
+               $(this).val('');
+               alert('Please select correct file format');
+           }
+       });
+
+
     $('#suggest').click(function(){
         var value1 = $(this).val();
         alert(value1);
@@ -131,6 +149,13 @@ $(document).ready(function () {
           alert('Any of fields can not be empty');
           return false;
       }
+
+       // var file = this.files[0];
+       // var fileType = file["type"];
+       // var ValidImageTypes = ["image/gif", "image/png"];
+       // if ($.inArray(fileType, ValidImageTypes) < 0) {
+       //     alert('only png allow ');
+       // }
 
       if((first.val().match(regex)) && (last.val().match(regex)) && (username.val().match(user)) && (pas.val() == confirm.val()) && (phone.val().match(phoneRejex1)) )
       {
@@ -232,5 +257,8 @@ $(document).ready(function () {
     $('body').click(function () {
        $('#list').hide();
     });
+
+
+
 
 }); // end of document ready
