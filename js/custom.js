@@ -109,19 +109,25 @@ $(document).ready(function () {
 
 
        $('input[type=file]').change(function () {
-               if (typeof ($("#img")[0].files) != "undefined") {
-                   var size = parseFloat($("#img")[0].files[0].size / 512).toFixed(2);
-                   alert("Size can not be exceed from 512 kb");
-               } else {
-                   alert("This browser does not support HTML5.");
-               }
-           var val = $("#img").val().toLowerCase(),
-               regex = new RegExp("(.*?)\.(jpeg|jpg|png)$");
 
-           if (!(regex.test(val))) {
-               $(this).val('');
-               alert('Please select correct file format');
-           }
+               var size = parseFloat($("#img")[0].files[0].size / 512).toFixed(2);
+               var val = $("#img").val().toLowerCase(),
+                   regex = new RegExp("(.*?)\.(jpeg|jpg|png)$");
+               if(size>512)
+               {
+                   $(this).val('');
+                   $('#attachResult').val('');
+                   $('#attachResult').html('file size exceeded by 512kb');
+                   return false;
+               }
+
+               if (!(regex.test(val))) {
+                   $(this).val('');
+                   $('#attachResult').val('');
+                   $('#attachResult').html('only jpg, jpeg and png image allow');
+                   return false;
+               }
+
        });
 
 
