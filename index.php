@@ -111,6 +111,7 @@
                         <input type="file" id="img" name="myfile">
 
                     </div>
+                    <div class="form-group" id="attachResult"></div>
 
                     <div class="form-group">
                         <label class="control-label">Phone no.</label>
