@@ -2,7 +2,7 @@
 input::placeholder{
     color: black;
 }
-#firstname , #lastname, #pasdiv, #confirmdiv, #phonediv {
+#firstname , #lastname, #pasdiv, #confirmdiv, #phonediv, #attachResult {
     color: red;
     font-size: 12px;
     font-weight: bolder;
