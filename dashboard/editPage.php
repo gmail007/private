@@ -1,7 +1,7 @@
 <?php
 include_once 'dashboardFunction.php';
 
-$user_pic = $_SESSION['username'];
+//$user_pic = $_SESSION['username'];
 $uemail = $_SESSION['email'];
 $id = $_GET['id'];
 $inboxMail = new dashboardFunction();

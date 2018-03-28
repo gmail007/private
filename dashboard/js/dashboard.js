@@ -236,18 +236,5 @@ $('#sent').click(function () {
     $('body').click(function () {
        $('.searchResult').hide();
     });
-
-    // $('#messageSubmit').prop('disabled', true);
-    // $('#replyMessage').keyup(function () {
-    //     // var data = $('#replyMessage').val();
-    //     alert($(this).val());
-    //     if($(this).val() != "")
-    //     {
-    //         $('#messageSubmit').prop('disabled', false);
-    //     }
-    // });
-
-
-
 }); //end of document ready
 

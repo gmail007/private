@@ -150,12 +150,6 @@ $(document).ready(function () {
           return false;
       }
 
-       // var file = this.files[0];
-       // var fileType = file["type"];
-       // var ValidImageTypes = ["image/gif", "image/png"];
-       // if ($.inArray(fileType, ValidImageTypes) < 0) {
-       //     alert('only png allow ');
-       // }
 
       if((first.val().match(regex)) && (last.val().match(regex)) && (username.val().match(user)) && (pas.val() == confirm.val()) && (phone.val().match(phoneRejex1)) )
       {
