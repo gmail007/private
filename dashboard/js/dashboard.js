@@ -5,12 +5,16 @@ $(document).ready(function()
         e.preventDefault();
     });
 
+    $('input[type=file]').change(function () {
+        var size = parseFloat($("#img")[0].files[0].size / 512).toFixed(2);
+        if(size>512)
+        {
+            $('#img').val('');
+            $('#imgResult').html('file size exceed by 512KB');
+        }
 
+    });
 
-
-    // tinyMCE.init({
-    //     selector:'.modal #message'
-    // });
 
     $('#attach').click(function () {
        $('#img').click();

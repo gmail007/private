@@ -48,6 +48,7 @@
             <input type="file" id="img" name="myfile">
 
         </div>
+        <div class="form-group" id="imgResult"></div>
 
         <div class="form-group">
             <button type="button" id="compose-send"><span class="fa fa-paper-plane"></span> Send</button>
@@ -61,6 +62,4 @@
         </div>
     </div>
 </div>
-<script>
 
-</script>

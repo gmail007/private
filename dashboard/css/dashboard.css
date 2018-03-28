@@ -327,6 +327,12 @@ input[name='replyFile']
 	text-align: center;
 }
 
+#imgResult{
+	color: red;
+	font-weight: bolder;
+	font-size: 12px;
+}
+
 @media only screen and (max-width: 768px) {
 	.search{
 		width: 25em;
